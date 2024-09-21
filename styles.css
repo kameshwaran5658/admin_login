@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2eddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease;
+  }
+  
+  .container {
+    display: flex;
+    width: 90%;
+    max-width: 800px; 
+    background-color: #e4eff9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    transform: translateY(20px);
+    animation: slideUp 0.5s ease forwards;
+  }
+  
+  .image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+    
+  }
+  
+  .image-section img:hover {
+    transform: scale(1.05);
+  }
+  
+  .login-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .login-container {
+    width: 100%;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    animation: fadeInUp 0.5s ease;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    margin-top: 20px;
+    opacity: 0; 
+    transform: translateY(-10px); 
+    animation: fadeInUp 0.5s ease forwards; 
+    animation-delay: 0.2s; 
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    margin-top: 5px;
+    opacity: 0;
+    transform: translateY(10px); 
+    animation: fadeInUp 0.5s ease forwards; 
+    animation-delay: 0.4s; 
+  }
+  
+  input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+    margin-top: 50px;
+  }
+  
+  .login-button:hover {
+    background-color: #45a049; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .login-button:active {
+    background-color: #388e3c; 
+    transform: translateY(1px);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column; 
+    }
+  
+    .image-section,
+    .login-section {
+      width: 100%;
+    }
+  }
+  
